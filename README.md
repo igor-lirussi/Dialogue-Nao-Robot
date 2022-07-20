@@ -1,38 +1,95 @@
-# TemplateRepository
-**Template code for other repos**
-## Description 
-A repository used as a base, not to write all over again each new one. Just modify the below description.
+# Nao Dialogue System
 
-### Topics:
-- Repository 
-- Template
-- Code Automation
+The code aims to give the robot basic conversation abilities, this includes a speech recognition module, a conversational engine to formulate the answers and the speech synthesis. 
+The dialogue is purpose-less, this means that no task is pursued except a normal and pleasant interaction (this is the objective). 
+It can be used as a fall-back system also for a task oriented interaction, often the counterpart tends to ramble or to test the IQ of the robot asking general questions.
 
-## Result
-![Result](./img/result.jpg)
-
-## Requirements & Dependencies
-- Programming Language
-- Libraries
-
-## Install 
-*   clone in the route directory
-*   ```./install.sh```
-
-## Run
-```bash
-execution command
+## Installation
+With git bash you have to clone, possibly with SSH, the repository with the following command. <br>
+**Pay attention to clone also the submodules with the --recurse-submodules or some parts of the project will miss**
+```
+git clone --recurse-submodules <repo_link>
 ```
 
+## Setup
+Just control the [Dependencies](#dependencies), check in your system if everything is installed.
+Or create an Anaconda environment with Python2 and Jupyter Notebook:
+```
+conda create -n python2 python=2.7 anaconda ipykernel
+source activate python2
+```
+- Download the [Nao Python SDK (NAOqi)](https://developer.softbankrobotics.com/nao6)
+- Create an Environment Variable called `PYTHONPATH` and set it to `path\to\python-sdk\lib`
+
+### Robot Setup
+- Connect Nao to the Ethernet with a LAN cable behind its head
+- Turn it on and wait a few minutes
+- Press the button in the chest and the robot should say the IP Address outloud
+- **Your computer must be on the same network of the robot**
+- Insert the IP Address in a browser, the default creadentials for the robot are username: "nao" and password: "nao", now you are connected to the robot settings interface.
+- Connect to a WiFi network if you want to operate without cable, reboot, obtain the new <robot-IP-Address> pressing again the button.
+
+
+## Run
+In the python2 environment, **Run and follow the steps in the notebook [Dialogue-Nao.ipynb](Dialogue-Nao.ipynb)** and
+REMEMBER TO TURN ON THE RECOGNITION SERVICE with a shell in the speech-recognition folder. 
+If the folder is empty probably you didn't clone with the submodules commands. <br> 
+Use python 2.7, or activate the Anaconda environment, and run the service in the folder:
+```
+python module_speechrecognition.py --pip <robot-IP-Address>
+```
+or, if you want to run the speech recognition service on the robot,
+everything you need should already be installed, simply clone the pepperspeechrecognition folder to your robot, ssh into it and run:
+```
+python module_speechrecognition.py
+```
+
+## Test conversational engine
+to run the conversational engine for manual tests execute the following command in a shell:
+```
+java -cp lib/Ab.jar Main bot=en
+```
+
+## Dependencies <a class="anchor" id="dependencies"></a>
+The __Speech Recognition__ module was built to be able to run **ON** Robot computer (in the head) so, if you run it on your computer, it's only dependencies are:
+* **Python 2.7** ,  because it uses
+* [Nao Python SDK (NAOqi)](https://developer.softbankrobotics.com/nao6/naoqi-developer-guide/naoqi-apis)
+* **numpy**
+
+The __Conversational Engine__ works with:
+* **Java** (because no AIML-2.0 systems in Python 2 were found)
+
+The __Speech Synthesis__ runs in the robot and works with:
+* **Python 2.7** ,  because it uses
+* [Nao Python SDK (NAOqi)](https://developer.softbankrobotics.com/nao6)
+
+All of them are pre-installed on the robot, if you want to run on your computer the speech recognition just create an environment that has all them, the one created with Anaconda should be fine.
+
+## Errors you might encounter
+java.io.FileNotFoundException: Dialogue-Nao-Robot/bots/en/aimlif/xyz.aiml.csv (No such file or directory)
+
+(Ab.jar) is looking for .csv files, these should be generated **automatically** from the .aiml files in the "aimlif" folder. 
+They are simply a faster less-readable copy of the originals. (so they are not included in the repo)
+
+-simply create a folder "aimlif" next to the "aiml" one-
+
+## Built With
+
+* Python 2.7
+
+## Changelog
+
+**Version 1.0** - Initial release, 20 July 2022
+
 ## Authors
-* **Igor Lirussi** @ BOUN Boğaziçi University - CoLoRs Lab
+
+* **Igor Lirussi** @ BOUN Boğaziçi University - CoLoRs (Cognitive Learning and Robotics) Lab
 
 ## License
-This project is licensed - see the [LICENSE](LICENSE) file for details.
 
-### Useful Resources & Extra
-- Links
-- Resources
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
 
 ## Acknowledgments
-*   All the people that contributed with suggestions and tips.
+
+* Johannes Bramauer @ Vienna University of Technology - for the [PepperSpeechRecognition](https://github.com/JBramauer/pepperspeechrecognition)
+* Anthony Zang (Uberi) and his [SpeechRecognition](https://github.com/Uberi/speech_recognition)
