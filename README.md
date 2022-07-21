@@ -31,10 +31,10 @@ source activate python2
 
 
 ## Run
-In the python2 environment, **Run and follow the steps in the notebook [Dialogue-Nao.ipynb](Dialogue-Nao.ipynb)** and
-REMEMBER TO TURN ON THE RECOGNITION SERVICE with a shell in the speech-recognition folder. 
+In the python2 environment, **Run and follow the steps in the notebook [Dialogue-Nao.ipynb](Dialogue-Nao.ipynb)** <br>
+REMEMBER TO TURN ON THE RECOGNITION SERVICE with a shell in the speech-recognition folder.
 If the folder is empty probably you didn't clone with the submodules commands. <br> 
-Use python 2.7, or activate the Anaconda environment, and run the service in the folder:
+Use python 2.7, or activate the Anaconda environment with: *conda activate python2* , and run the service in the folder:
 ```
 python module_speechrecognition.py --pip <robot-IP-Address>
 ```

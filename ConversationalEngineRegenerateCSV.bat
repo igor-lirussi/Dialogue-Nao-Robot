@@ -1,4 +1,4 @@
-echo Bot folders (aiml, config,...) should be into bots/en/
+echo Bot folders aiml,config,... should be into bots/en/
 echo Program deletes folder "aimlif" and recreates it with CSV desired
 pause
 rmdir /S /Q .\bots\en\aimlif
