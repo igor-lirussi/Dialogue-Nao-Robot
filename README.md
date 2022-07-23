@@ -3,6 +3,8 @@
 The code aims to give the robot basic conversation abilities, this includes a speech recognition module, a conversational engine to formulate the answers and the speech synthesis. 
 The dialogue is purpose-less, this means that no task is pursued except a normal and pleasant interaction (this is the objective). 
 It can be used as a fall-back system also for a task oriented interaction, often the counterpart tends to ramble or to test the IQ of the robot asking general questions.
+ <br>
+[Pepper Robot version available here](https://github.com/igor-lirussi/Dialogue-Pepper-Robot)
 
 ## Installation
 With git bash you have to clone, possibly with SSH, the repository with the following command. <br>
@@ -87,7 +89,7 @@ They are simply a faster less-readable copy of the originals. (so they are not i
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
+This project is licensed under a License - see the [LICENSE](LICENSE) file for details
 
 ## Acknowledgments
 
