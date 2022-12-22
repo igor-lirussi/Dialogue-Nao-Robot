@@ -20,7 +20,7 @@ Or create an Anaconda environment with Python2 and Jupyter Notebook:
 conda create -n python2 python=2.7 anaconda ipykernel
 source activate python2
 ```
-- Download the [Nao Python SDK (NAOqi)](https://developer.softbankrobotics.com/nao6)
+- Download the [Nao Python SDK (NAOqi)](https://github.com/igor-lirussi/pepperspeechrecognition/releases/tag/PyNaoQi_SDK)
 - Create an Environment Variable called `PYTHONPATH` and set it to `path\to\python-sdk\lib`
 
 ### Robot Setup
