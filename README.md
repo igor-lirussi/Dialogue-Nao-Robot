@@ -4,7 +4,7 @@ The code aims to give the robot basic conversation abilities, this includes a sp
 The dialogue is purpose-less, this means that no task is pursued except a normal and pleasant interaction (this is the objective). 
 It can be used as a fall-back system also for a task oriented interaction, often the counterpart tends to ramble or to test the IQ of the robot asking general questions.
  <br>
-<!--[Pepper Robot version available here](https://github.com/igor-lirussi/Dialogue-Pepper-Robot)-->
+[Pepper Robot version available here](https://github.com/igor-lirussi/Dialogue-Pepper-Robot)
 
 ## Installation
 With git bash you have to clone, possibly with SSH, the repository with the following command. <br>
@@ -20,7 +20,7 @@ Or create an Anaconda environment with Python2 and Jupyter Notebook:
 conda create -n python2 python=2.7 anaconda ipykernel
 source activate python2
 ```
-- Download the [Nao Python SDK (NAOqi)](https://github.com/igor-lirussi/pepperspeechrecognition/releases/tag/PyNaoQi_SDK)
+- Download the [NAOqi Python SDK](https://github.com/igor-lirussi/pepperspeechrecognition/releases/tag/PyNaoQi_SDK)
 - Create an Environment Variable called `PYTHONPATH` and set it to `path\to\python-sdk\lib`
 
 ### Robot Setup
@@ -56,7 +56,7 @@ java -cp lib/Ab.jar Main bot=en
 ## Dependencies <a class="anchor" id="dependencies"></a>
 The __Speech Recognition__ module was built to be able to run **ON** Robot computer (in the head) so, if you run it on your computer, it's only dependencies are:
 * **Python 2.7** ,  because it uses
-* [Nao Python SDK (NAOqi)](https://developer.softbankrobotics.com/nao6/naoqi-developer-guide/naoqi-apis)
+* [Nao Python SDK (NAOqi SDK)](https://developer.softbankrobotics.com/nao6/naoqi-developer-guide/naoqi-apis)
 * **numpy**
 
 The __Conversational Engine__ works with:
@@ -64,7 +64,7 @@ The __Conversational Engine__ works with:
 
 The __Speech Synthesis__ runs in the robot and works with:
 * **Python 2.7** ,  because it uses
-* [Nao Python SDK (NAOqi)](https://developer.softbankrobotics.com/nao6)
+* [Nao Python SDK (NAOqi SDK)](https://developer.softbankrobotics.com/nao6/naoqi-developer-guide/naoqi-apis)
 
 All of them are pre-installed on the robot, if you want to run on your computer the speech recognition just create an environment that has all them, the one created with Anaconda should be fine.
 
