@@ -6,6 +6,9 @@ It can be used as a fall-back system also for a task oriented interaction, often
  <br>
 [Pepper Robot version available here](https://github.com/igor-lirussi/Dialogue-Pepper-Robot)
 
+## Video of the Result
+[![Nao Dialogue](http://i3.ytimg.com/vi/lJ26Ek0sMls/maxresdefault.jpg)](https://youtu.be/lJ26Ek0sMls "Nao Dialogue Video")
+
 ## Installation
 With git bash you have to clone, possibly with SSH, the repository with the following command. <br>
 **Pay attention to clone also the submodules with the --recurse-submodules or some parts of the project will miss**
@@ -74,7 +77,7 @@ java.io.FileNotFoundException: Dialogue-Nao-Robot/bots/en/aimlif/xyz.aiml.csv (N
 (Ab.jar) is looking for .csv files, these should be generated **automatically** from the .aiml files in the "aimlif" folder. 
 They are simply a faster less-readable copy of the originals. (so they are not included in the repo)
 
--simply create a folder "aimlif" next to the "aiml" one-
+- simply create a folder "aimlif" next to the "aiml" one-
 
 ## Built With
 
